@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="HANGMAN" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Rye' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="loser game-over">
+        <span class="lose message"></span>
+        <a href="#" class="play-again shake" onclick="reload()">Play Again???</a>
+    </div>
+    <div class="container">
+        <div class="game-wrap">
+            <h1 class="title">Hangman!!!!!!!!!!!!!!!!</h1>
+            <h2 class="clue">Game clue: <span id="hint" class="hint"></span></h2>
+            <div id="choices" class="choices"></div>
+            <div class="guess-box" id="guess-box"></div>
+            <div class="used-letters clearfix">
+                <div id="hits" class="hits half">Hits:</div>
+                <div id="miss-box" class="miss-box half">Misses:</div>
+            </div>
+        </div>
+        <div class="gallows-wrap">
+            <div id="gallows" class="gallows"></div>
+        </div>
+        <audio class="hidden tuba" id="tuba">
+            <source src="audio/loser.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="hidden winning" id="winning">
+            <source src="audio/winner.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="hidden choosing" id="choosing">
+            <source src="audio/ding.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="hidden fail" id="fail">
+            <source src="audio/fail.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="hidden fantastic" id="fantastic">
+            <source src="audio/fantastic.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

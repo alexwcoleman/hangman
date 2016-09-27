@@ -1,0 +1,280 @@
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    body {
+        position: relative;
+    }
+    
+    .container {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .game-wrap {
+        width: calc(100% - 200px);
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: Lobster;
+    }
+    
+    .title {
+        margin-top: 0;
+    }
+    
+    .letter {
+        font-family: Rye;
+        text-transform: uppercase;
+    }
+    
+    .choices span {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border: 1px solid #000;
+        text-align: center;
+        margin: 5px;
+        line-height: 40px;
+        font-size: 30px;
+    }
+    
+    .guess-box span {
+        width: auto;
+        min-width: 2rem;
+        min-height: 2rem;
+        display: inline-block;
+        border-bottom: 2px solid #000;
+        text-align: center;
+        margin: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-indent: -9999rem;
+    }
+    
+    div .space {
+        text-indent: -9999rem;
+        border-bottom: 0;
+    }
+    
+    span.space {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: 0;
+        margin: 0;
+        line-height: 0;
+        min-height: 0;
+    }
+    
+    .chosen {
+        background: #f00;
+        text-indent: -9999rem;
+    }
+    
+    .guess-box span.picked {
+        text-indent: 0;
+    }
+    
+    .game-over,
+    .play-again,
+    .winner {
+        height: 0;
+        background: rgba(0, 0, 0, 0.9);
+        visibility: hidden;
+        text-align: center;
+        font-family: Lobster;
+        z-index:2;
+    }
+    
+    .game-over .message {
+        font-size: 3rem;
+        line-height: 150%;
+    }
+    
+    .game-over.animated,
+    .winner.animated {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        visibility: visible;
+    }
+    
+    .play-again.animated {
+        visibility: visible;
+        height: auto;
+    }
+    
+    .game-over .message,
+    .game-over .play-again {
+        font-size: 3rem;
+        position: absolute;
+        width: auto;
+        width: 24rem;
+        height: 8rem;
+        line-height: 8rem;
+        background: #f00;
+        margin: 0 auto;
+        left: calc(50% - 12rem);
+        top: calc(50% - 4rem);
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .game-over .play-again {
+        background: #fff;
+        color: #000;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .hits,
+    .miss-box {
+        min-height: 40px;
+        margin-top: 20px;
+    }
+    
+    .hits span,
+    .miss-box span {
+        background: #000;
+        color: #fff;
+        width: 30px;
+        display: inline-block;
+        height: 30px;
+        border-radius: 50%;
+        text-indent: 0;
+        text-align: center;
+        line-height: 30px;
+        margin-left: 5px;
+    }
+    
+    .miss-box span {
+        background: #f00;
+        color: #ff0;
+    }
+    
+    .gallows-wrap {
+        z-index: -10;
+        position: absolute;
+        top: 0;
+        right: 0;
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -ms-transition: all 2s ease-in-out;
+        -o-transition: all 2s ease-in-out;
+        transition: all 2s ease-in-out;
+    }
+    
+    .gallows {
+        background: url(../img/hm-noose.png) no-repeat top left / contain;
+        width: 300px;
+        height: 500px;
+        position: relative;
+    }
+    
+    .gallows div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: contain;
+    }
+    
+    .body-1 {
+        background: url(../img/hm-bag.png);
+    }
+    
+    .body-2 {
+        background: url(../img/hm-body.png);
+    }
+    
+    .body-3 {
+        background: url(../img/hm-arm-left.png);
+    }
+    
+    .body-4 {
+        background: url(../img/hm-arm-right.png);
+    }
+    
+    .body-5 {
+        background: url(../img/hm-leg-left.png);
+    }
+    
+    .body-6 {
+        background: url(../img/hm-leg-right.png);
+    }
+    
+    .title {
+        font-size: 4rem;
+        color: #f0f;
+        margin-bottom: 0;
+    }
+    
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    
+    .half {
+        width: 50%;
+        float: left;
+    }
+    
+    .clue {
+        z-index: 0;
+        font-size: 2.5rem;
+        padding: 15px 25px;
+        background: #eee;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #3bb3e0;
+        color: #fff;
+        position: relative;
+        padding: 10px 20px;
+        border-left: solid 1px #2ab7ec;
+        background-image: linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44, 160, 202)), color-stop(1, rgb(62, 184, 229)));
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+    }
+    
+    .clue:hover {
+        top: 3px;
+        background-image: linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62, 184, 229)), color-stop(1, rgb(44, 160, 202)));
+        -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+    }
